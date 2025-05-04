@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classy Tournament Official - Free Fire Tournament</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://cdn.wallpapersafari.com/59/87/FUeWwF.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .info {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+    .info p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    .register-button {
+      display: block;
+      margin: 1rem auto;
+      padding: 1rem 2rem;
+      background-color: #ffcc00;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    form {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      max-width: 600px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      display: none;
+    }
+    form label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+    form input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: none;
+    }
+    form button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .discord-link {
+      display: none;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+    .discord-link a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Classy Tournament Official</h1>
+    <p>Free Fire Tournament - Register Now!</p>
+  </header>
+
+  <section class="info">
+    <p><strong>Email:</strong> classytournamentofficial@gmail.com</p>
+    <p><strong>Entry Fee:</strong> ₹50</p>
+    <p><strong>Per Kill Reward:</strong> ₹20</p>
+    <p><strong>Booyah Reward:</strong> ₹800</p>
+  </section>
+
+  <button class="register-button" onclick="document.getElementById('regForm').style.display='block'">Register Now</button>
+
+  <form id="regForm">
+    <label for="whatsapp">WhatsApp Number</label>
+    <input type="text" id="whatsapp" name="whatsapp" required />
+
+    <label for="uid">UID IGN Name</label>
+    <input type="text" id="uid" name="uid" required />
+
+    <label for="payment">Payment Through (e.g., UPI, Paytm, etc.)</label>
+    <input type="text" id="payment" name="payment" required />
+
+    <label for="screenshot">Screenshot of Payment</label>
+    <input type="file" id="screenshot" name="screenshot" accept="image/*" required />
+
+    <button type="submit">Submit Registration</button>
+  </form>
+
+  <div class="discord-link" id="discord">
+    <p>Thanks for registering! Join our Discord: <a href="https://discord.gg/4ZVas88F" target="_blank">https://discord.gg/4ZVas88F</a></p>
+  </div>
+
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert("Registration submitted successfully!");
+      document.getElementById('discord').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
